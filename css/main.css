@@ -1,0 +1,103 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Table of Contents
+1) universal styles
+2) index.html
+	- State Options
+	- L/R & Middle Containing Divs
+	- Flag
+	- Buttons
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*--------------------------------------
+            Universal Styles
+--------------------------------------*/
+
+	html {
+		font-style: 16px;
+	}
+
+	body{
+	  background: url('../images/UnitedStatesFlag.svg.png') no-repeat center center fixed;
+	  background-size: cover;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.wrapper {
+		margin-top: 2rem;
+	}
+
+
+/*++++++++++++ State Options ++++++++++++*/
+/*----- Displays | Sizes | Positions ----*/
+
+  .options > li > img,
+  .options > li > img {
+    height: 50%;
+    width: 70%;
+  }
+
+  .options > li {
+    margin-top: 5%;
+  }
+
+
+/*+++++++++++++++ Flag ++++++++++++++++++*/
+/*----- Displays | Sizes | Positions ----*/
+
+  #flag img{
+    height: 60%;
+    width: 80%;
+  }
+  #flag{
+    margin: 10% auto;
+  }
+
+
+/*+++++ Div of L/R & Middle Options +++++*/
+/*----- Displays | Sizes | Positions ----*/
+
+  .left-options {
+    float: left;
+    width: 25%;
+  }
+
+  .middle-option{
+    float: left;
+    width: 50%;
+  }
+
+  .right-options {
+    float: right;
+    width: 25%;
+  }
+
+/*+++++++++++++++ Buttons ++++++++++++++++++*/
+/*----- Displays | Sizes | Positions ----*/
+
+  #question-buttons button{
+    display: inline-block;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
