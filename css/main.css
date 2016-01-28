@@ -1,11 +1,16 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Table of Contents
-1) universal styles
-2) index.html
-	- State Options
-	- L/R & Middle Containing Divs
-	- Flag
-	- Buttons
+1) Universal styles
+2) Index.html
+  -	Intro-Content
+ 	- Instructions
+ 	- Main-Content
+ 		- L/R & Middle Containing Divs
+ 		- State Options
+ 		- Flag
+ 	- Secondary-Content
+ 		- Buttons
+ 	- Results
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -30,57 +35,77 @@
 		text-decoration: none;
 	}
 
-	.wrapper {
+	#wrapper {
 		margin-top: 2rem;
 	}
 
-
-/*++++++++++++ State Options ++++++++++++*/
-/*----- Displays | Sizes | Positions ----*/
-
-  .options > li > img,
-  .options > li > img {
-    height: 50%;
-    width: 70%;
-  }
-
-  .options > li {
-    margin-top: 5%;
-  }
+	.hidden {
+		display: none;
+	}
 
 
-/*+++++++++++++++ Flag ++++++++++++++++++*/
-/*----- Displays | Sizes | Positions ----*/
-
-  #flag img{
-    height: 60%;
-    width: 80%;
-  }
-  #flag{
-    margin: 10% auto;
-  }
+/*--------------------------------------
+            	Index.html
+--------------------------------------*/
 
 
-/*+++++ Div of L/R & Middle Options +++++*/
-/*----- Displays | Sizes | Positions ----*/
+/*++++++++++ Intro-Content ++++++++++++*/
 
-  .left-options {
-    float: left;
-    width: 25%;
-  }
 
-  .middle-option{
-    float: left;
-    width: 50%;
-  }
 
-  .right-options {
-    float: right;
-    width: 25%;
-  }
+/*+++++++++++ Instructions +++++++++++++*/
 
-/*+++++++++++++++ Buttons ++++++++++++++++++*/
-/*----- Displays | Sizes | Positions ----*/
+
+	
+/*+++++++++++ Main-Content +++++++++++++*/
+
+
+	/****** Div of L/R & Middle Options *****/
+
+	  .left-options {
+	    float: left;
+	    width: 25%;
+	  }
+
+	  .middle-option{
+	    float: left;
+	    width: 50%;
+	  }
+
+	  .right-options {
+	    float: right;
+	    width: 25%;
+	  }
+
+
+	/************ State Options ************/
+
+	  .options > li > img,
+	  .options > li > img {
+	    height: 50%;
+	    width: 70%;
+	  }
+
+	  .options > li {
+	    margin-top: 5%;
+	  }
+
+
+	/**************** Flag ******************/
+
+	  #flag img{
+	    height: 60%;
+	    width: 80%;
+	  }
+	  #flag{
+	    margin: 10% auto;
+	  }
+
+
+
+/*++++++++++ Secondary-Content +++++++++++*/
+
+	/************* Buttons **************/
 
   #question-buttons button{
     display: inline-block;
@@ -88,11 +113,7 @@
 
 
 
-
-
-
-
-
+/*++++++++++++++ Results ++++++++++++++++*/
 
 
 

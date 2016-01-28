@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>State Flags</title>
+	<head>
+		<meta charset="UTF-8">
+		<title>State Flags</title>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="css/main.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="css/main.css">
 
-</head>
-<body>
+	</head>
+	<body>
 
-	<div class="wrapper">
+		<div id="wrapper">
 
-		<div class="intro-content">
-			<div class="row">
-			  <h1 class="text-center">States' Flags</h1>
-			  <h3 class="text-center">To what state does this flag belong?</h3>
-			  <h4 id="questionStatus" class="text-center">Question <span id="questionNumber">1</span> of 50</h4>
-			</div>
-		</div> <!-- end intro-content div -->
+			<div id="instructions" class="container-fluid hidden">
+				<div class="row">
+					<h2>Instructions:</h2>
+					<ul>
+						<li>Match the State Flag to one of the six State options</li>
+						<li>After state is selected, click "submit answer"</li>
+						<li>After verification is received, click "next question"</li>
+						<li>Click "next question"</li>
+						<li>Repeat until the game is over and the results are shown</li>
+					</ul>
+				</div>
+			</div> <!-- end #instructions div -->
+			
+			
+			<div id="intro-content" class="container-fluid">
+				<div class="row">
+				  <h1 class="text-center">States' Flags</h1>
+				  <h3 class="text-center">To what state does this flag belong?</h3>
+				  <h4 id="questionStatus" class="text-center">Question <span id="question-number">1</span> of <span id="question-total">50</span></h4>
+				</div>
+			</div> <!-- end #intro-content div -->
 
-	  <div id="main-content" class="container-fluid">
-	    <div class="row">
 
-	        <div class="left-options">
-	          <ul class="options list-unstyled">
-	            <li id="option1">
-	              <img class="center-block" src="images/state_location/AlabamaStateLocation.svg.png" alt="Alabama">
-	            </li>
-	            <li id="option2">
-	              <img class="center-block" src="images/state_location/AlaskaStateLocation.svg.png" alt="Alaska">
-	            </li>
-	            <li id="option3">
-	              <img class="center-block" src="images/state_location/GeorgiaStateLocation.svg.png" alt="Georgia">
-	            </li>
-	          </ul>
-	        </div>
+		  <div id="main-content" class="container-fluid">
+		    <div class="row">
 
-	        <div class="middle-option">
-	          <div id="flag">
-	            <img class="center-block" src="images/state_flag/AlabamaStateFlag.svg.png" alt="Alabama">
-	          </div>
-	        </div>
+		        <div class="left-options">
+		          <ul class="options list-unstyled">
+		            <li id="option1">
+		              <img class="center-block" src="images/state_location/AlabamaStateLocation.svg.png" alt="Alabama">
+		            </li>
+		            <li id="option2">
+		              <img class="center-block" src="images/state_location/AlaskaStateLocation.svg.png" alt="Alaska">
+		            </li>
+		            <li id="option3">
+		              <img class="center-block" src="images/state_location/GeorgiaStateLocation.svg.png" alt="Georgia">
+		            </li>
+		          </ul>
+		        </div>
 
-	        <div class="right-options">
-	          <ul class="options list-unstyled">
-	            <li id="option4">
-	              <img class="center-block" src="images/state_location/IllinoisStateLocation.svg.png" alt="Illinois">
-	            </li>
-	            <li id="option5">
-	              <img class="center-block" src="images/state_location/LouisianaStateLocation.svg.png" alt="Louisiana">
-	            </li>
-	            <li id="option6">
-	              <img class="center-block" src="images/state_location/MontanaStateLocation.svg.png" alt="Montana">
-	            </li>
-	          </ul>
-	        </div>
+		        <div class="middle-option">
+		          <div id="flag">
+		            <img class="center-block" src="images/state_flag/AlabamaStateFlag.svg.png" alt="Alabama">
+		          </div>
+		        </div>
 
-	    </div>
-	  </div> <!-- end main-content div -->
+		        <div class="right-options">
+		          <ul class="options list-unstyled">
+		            <li id="option4">
+		              <img class="center-block" src="images/state_location/IllinoisStateLocation.svg.png" alt="Illinois">
+		            </li>
+		            <li id="option5">
+		              <img class="center-block" src="images/state_location/LouisianaStateLocation.svg.png" alt="Louisiana">
+		            </li>
+		            <li id="option6">
+		              <img class="center-block" src="images/state_location/MontanaStateLocation.svg.png" alt="Montana">
+		            </li>
+		          </ul>
+		        </div>
 
-		<div id="secondary-content" class="container-fluid">
-		  <div class="row">
-		    <h4 class="text-center">Your choice: <span id="your-choice"></span></h4>
-		    <div id="question-buttons" class="text-center">
-		      <button id="submitAnswer" class="btn btn-default center-block" type="submit">Submit Answer</button>
-		      <button id="next" class="btn btn-default center-block" type="submit">Next Question</button>
 		    </div>
-		  </div>
-		</div> <!-- end secondary-content div -->
-
-		<div id="test" class="container">
-		  <div class="row">
-		    <p></p>
-		  </div>
-		</div>
-
-	</div> <!-- end wrapper div -->
+		  </div> <!-- end #main-content div -->
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="javascript/app.js"></script>
-</body>
+			<div id="secondary-content" class="container-fluid">
+			  <div class="row">
+			    <h4 class="text-center">Your choice: <span id="your-choice"></span></h4>
+			    <div id="question-buttons" class="text-center">
+			      <button id="submitAnswer" class="btn btn-default center-block" type="submit">Submit Answer</button>
+			      <button id="next" class="btn btn-default center-block" type="submit">Next Question</button>
+			    </div>
+			  </div>
+			</div> <!-- end #secondary-content div -->
+
+
+			<div id="results" class="container-fluid hidden">
+			  <div class="row">
+
+			    <div id="correct-answers">
+			    	<h2>You Correctly Answered:</h2>
+			    	<ul></ul>
+			    </div> <!-- end #correct-answers div -->
+
+					<div id="incorrect-answers">
+						<h2>You Incorrectly Answered:</h2>
+						<ul></ul>
+					</div> <!-- end #incorrect-answers div -->
+
+			  </div> <!-- end row div -->
+			</div> <!-- end #results div -->
+
+		</div> <!-- end wrapper div -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="javascript/app.js"></script>
+	</body>
 </html>
