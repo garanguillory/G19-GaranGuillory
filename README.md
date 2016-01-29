@@ -9,6 +9,9 @@ There are six state options (three on each side of the flag).
 
 ##Features
  Types of games:
+   - 10 or 20 question sprints
+   - 25 question half-marathon
+   - 50 question marathon
  
  Difficulty levels:
  
