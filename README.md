@@ -9,7 +9,8 @@ At game's end, the user will see a results page of correct/incorrect answers.
 
 
 
-<img src="https://wireframe.cc/kkFkHK">
+![m'lady](https://wireframe.cc/kkFkHK)
+
 
 
 
