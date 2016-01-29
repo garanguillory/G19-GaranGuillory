@@ -8,6 +8,11 @@ User will receive automatic confirmation of an incorrect/correct answer.
 At game's end, the user will see a results page of correct/incorrect answers.
 
 ##Technologies Utilized
+- HTML
+- CSS
+ - mainly Bootstrap
+- Javascript
+ - Vanilla javascript plus jQuery
 
 ##Features
  Types of games:
