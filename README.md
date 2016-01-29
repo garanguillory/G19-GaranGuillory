@@ -31,9 +31,5 @@ At game's end, the user will see a results page of correct/incorrect answers.
  - Medium: User will have 2 attempts to answer the question correctly
  - Hard: User will have 1 attempt to answer the question correctly
  
- 
-
-
-
-
-
+##Project Tracking
+  https://www.pivotaltracker.com/n/projects/1526055
