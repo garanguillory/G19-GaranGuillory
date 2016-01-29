@@ -9,7 +9,7 @@ At game's end, the user will see a results page of correct/incorrect answers.
 
 
 
-![](https://wireframe.cc/kkFkHK.png)
+![](https://raw.github.com/username/projectname/branch/path/to/img.png)
 
 
 
