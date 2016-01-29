@@ -8,7 +8,11 @@ There are six state options (three on each side of the flag).
 ##Technologies Utilized
 
 ##Features
-
+ Types of games:
+ 
+ Difficulty levels:
+ 
+ 
 
 
 
