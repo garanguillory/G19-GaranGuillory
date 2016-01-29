@@ -7,6 +7,12 @@ There are six state options (three on each side of the flag).
 User will receive automatic confirmation of an incorrect/correct answer.
 At game's end, the user will see a results page of correct/incorrect answers.
 
+
+
+<img src="https://wireframe.cc/kkFkHK">
+
+
+
 ##Technologies Utilized
 - HTML
 - CSS
