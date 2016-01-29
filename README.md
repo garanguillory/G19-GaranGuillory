@@ -14,6 +14,9 @@ There are six state options (three on each side of the flag).
    - 50 question marathon
  
  Difficulty levels:
+ Easy: User will have 3 attempts to answer the question correctly
+ Medium: User will have 2 attempts to answer the question correctly
+ Hard: User will have 1 attempt to answer the question correctly.
  
  
 
