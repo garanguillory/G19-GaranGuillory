@@ -8,9 +8,7 @@ User will receive automatic confirmation of an incorrect/correct answer.
 At game's end, the user will see a results page of correct/incorrect answers.
 
 
-
-![](https://raw.github.com/username/projectname/branch/path/to/img.png)
-
+![](https://raw.github.com/garanguillory/G19-GaranGuillory/images/Screen Shot 2016-01-29 at 12.03.01 PM.png)
 
 
 
