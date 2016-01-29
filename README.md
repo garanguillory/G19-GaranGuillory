@@ -9,7 +9,7 @@ At game's end, the user will see a results page of correct/incorrect answers.
 
 
 
-![m'lady](https://wireframe.cc/kkFkHK)
+!(https://wireframe.cc/kkFkHK)
 
 
 
