@@ -18,30 +18,46 @@
             Universal Styles
 --------------------------------------*/
 
-	html {
-		font-style: 16px;
-	}
+		html {
+			font-style: 16px;
+		}
 
-	body{
-	  background: url('../images/UnitedStatesFlag.svg.png') no-repeat center center fixed;
-	  background-size: cover;
-	}
+		/*	body{
+		  background: url('../images/UnitedStatesFlag.svg.png') no-repeat center center fixed;
+		  background-size: cover;
+		}*/
 
-	ul {
-		list-style: none;
-	}
+		/* CSS trick that adds opacity to background image */
+			body:after {
+				content : "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url('../images/UnitedStatesFlag.svg.png') no-repeat center center fixed;
+			  background-size: cover;
+				width: 100%;
+				height: 100%;
+				opacity : 0.5;
+				z-index: -1;
+			}
 
-	a {
-		text-decoration: none;
-	}
 
-	#wrapper {
-		margin-top: 2rem;
-	}
+		ul {
+			list-style: none;
+		}
 
-	.hidden {
-		display: none;
-	}
+		a {
+			text-decoration: none;
+		}
+
+		#wrapper {
+			margin-top: 2rem;
+		}
+
+		.hidden {
+			display: none;
+		}
 
 
 /*--------------------------------------
@@ -90,12 +106,24 @@
 	    margin-top: 5%;
 	  }
 
+	  .selected {
+	  	border: 4px solid orange;
+	  }
 
-	/**************** Flag ******************/
+		.correct {
+		  border: 4px solid lightgreen;
+		}
+
+		.incorrect {
+		  border: 4px solid red;
+		}
+
+	/*~~~~~~~~~~~~~~~~ Flag ~~~~~~~~~~~~~~~*/
 
 	  #flag img{
 	    height: 60%;
 	    width: 80%;
+	    border: 1px solid black;
 	  }
 	  #flag{
 	    margin: 10% auto;
@@ -107,9 +135,9 @@
 
 	/************* Buttons **************/
 
-  #question-buttons button{
-    display: inline-block;
-  }
+	  #question-buttons button{
+	    display: inline-block;
+	  }
 
 
 

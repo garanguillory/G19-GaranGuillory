@@ -150,3 +150,5 @@ var states = [
     location: "<img class='center-block' src='images/state_location/WyomingStateLocation.svg.png' alt='Wyoming'>",
     flag: "<img class='center-block' src='images/state_flag/WyomingStateFlag.svg.png' alt='Wyoming'>"}
 ];
+
+module.exports = States;
