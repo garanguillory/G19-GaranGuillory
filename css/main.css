@@ -70,8 +70,68 @@
 
 
 /*+++++++++++ Instructions +++++++++++++*/
+	
+	/* #intructions div style and position */
+		#instructions {
+			background: rgba(0,0,0,0.8);
+			border: 2px solid black;
+			border-radius: 2rem;
+			color: lightgreen;
+			font-size: 2rem;
+			height: 75%;
+			left: 15%;
+			margin: 0 auto;
+			overflow: scroll;
+			position: absolute;
+			top: 12.5%;
+			width: 70%;
+		}
 
+	/* individual div positions */
+		#instructions #how-to-play,
+		#instructions #game-length,
+		#instructions #game-difficulty {
+			/*background: orange;*/
+			margin: 0 auto;
+			padding-bottom: 0.5rem;
+			padding-top: 0.5rem;
+			text-align: center;
+			width: 70%;
+		}
 
+		#instructions #how-to-play {
+			/*margin-top: 7.5%;*/
+			width: 90%;
+		}
+
+		#instructions #game-length ul,
+		#instructions #game-difficulty ul {
+			/*margin: 0 auto;*/
+			padding-left: 0;
+		}
+		
+		#instructions #game-length ul li,
+		#instructions #game-difficulty ul li {
+			/*float: left;*/
+			text-align: center;
+			display: inline-block;
+			/*margin-bottom: 2rem;*/
+			margin-right: 0.5rem;
+		}
+
+		#instructions #game-difficulty {
+			/*margin-bottom: 2.5%;
+			margin-top: 2.5%;*/
+		}
+
+		#instructions #game-length {
+			/*margin-bottom: 2.5%;*/
+		}
+
+		#instructions #game-length ul li:last-child,
+		#instructions #game-difficulty ul li:last-child {
+			margin-right: 0;
+		}
 	
 /*+++++++++++ Main-Content +++++++++++++*/
 
@@ -96,7 +156,6 @@
 
 	/************ State Options ************/
 
-	  .options > li > img,
 	  .options > li > img {
 	    height: 50%;
 	    width: 70%;

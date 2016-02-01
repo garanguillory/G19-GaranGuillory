@@ -14,17 +14,55 @@
 
 		<div id="wrapper">
 
-			<div id="instructions" class="container-fluid hidden">
+			<div id="instructions" class="container-fluid">
 				<div class="row">
-					<h2>Instructions:</h2>
-					<ul>
-						<li>Match the State Flag to one of the six State options</li>
-						<li>After state is selected, click "submit answer"</li>
-						<li>After verification is received, click "next question"</li>
-						<li>Click "next question"</li>
-						<li>Repeat until the game is over and the results are shown</li>
-					</ul>
-				</div>
+
+					<div id="how-to-play">
+						<h2>How to play</h2>
+							<p>Match the flag to one of the six state options <br>
+								After state is selected, click "submit answer" <br>
+								After verification is received, click "next question" <br>
+								Repeat until the results are shown</p>
+					</div> <!-- end how-to-play div -->
+
+					<div id="game-difficulty">
+						<h3>Difficulty</h3>
+						<ul>
+							<li>
+								<!-- <label for="submit">Easy</label> <br> -->
+								<input id="easy" class="btn btn-default" type="submit" value="Easy">
+							</li>
+							<li>
+								<!-- <label for="submit">Half Marathon</label> <br> -->
+								<input id="medium" class="btn btn-default" type="submit" value="Medium">
+							</li>
+							<li>
+								<!-- <label for="submit">Marathon</label> <br> -->
+								<input id="hard" class="btn btn-default" type="submit" value="Hard">
+							</li>
+						</ul>
+					</div> <!-- end #game-difficulty div -->
+
+
+					<div id="game-length">
+						<h3>Game Length</h3>
+						<ul>
+							<li>
+								<label for="submit">Sprint</label> <br>
+								<input id="sprint" class="btn btn-default" type="submit" value="10 questions">
+							</li>
+							<li>
+								<label for="submit">Half Marathon</label> <br>
+								<input id="half-marathon" class="btn btn-default" type="submit" value="25 questions">
+							</li>
+							<li>
+								<label for="submit">Marathon</label> <br>
+								<input id="marathon" class="btn btn-default" type="submit" value="50 questions">
+							</li>
+						</ul>
+					</div> <!-- end #game-length div -->
+
+				</div> <!-- end row div -->
 			</div> <!-- end #instructions div -->
 			
 
