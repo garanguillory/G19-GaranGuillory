@@ -116,7 +116,7 @@ var states = [
     flag: "<img class='center-block' src='images/state_flag/NewJerseyStateFlag.svg.png' alt='NewJersey'>"},
   { name: "NewMexico",
     location: "<img class='center-block' src='images/state_location/NewMexicoStateLocation.svg.png' alt='New Mexico'>",
-    flag: "<img class='center-block' src='images/state_flag/NewMexicoStateFlag.svg.png' alt='New Mexico'>"},
+    flag: "<img class='center-block' src='images/state_flag/NewMexicoStateFlag.svg.png' alt='NewMexico'>"},
   { name: "NewYork",
     location: "<img class='center-block' src='images/state_location/NewYorkStateLocation.svg.png' alt='NewYork'>",
     flag: "<img class='center-block' src='images/state_flag/NewYorkStateFlag.svg.png' alt='NewYork'>"},
@@ -237,13 +237,12 @@ var correctResults = [];
 var incorrectResults = [];
 
 
+var gameArray = [];
+
+var randomNumberArray = [];
 
 
 
 
 
 
-
-
-
-// module.exports = States;
