@@ -22,9 +22,11 @@
 			return questionNumber;
 	};
 
-// random number 1 - 50
-	function random50(){
-		return Math.floor((Math.random() * 50)+1);
+// random number 0 - 49
+// states[0] is 'Alabama' the first state
+// states[49] is 'Wyoming' the last state 
+ 	function random50(){
+		return Math.floor((Math.random() * 50));
 	}
 
 	// random number 1 - 6
@@ -39,16 +41,22 @@ $(document).ready(function(){
 
 /* -------------------- functionality for instant play ------------------------- */
 
+	// display length of game 
+		$('#play-now').on('click', function(){
+			$('#question-total').empty().append(gameLength);
+		});
+
+
 	// randomize first question
 		$('#play-now').on('click', function(){
 		    var num = random50();
-
 		   		for(var i=1; i<=6; i++){
 		   			$("#option"+i).empty().append(questions[num]['option'+i]);
-		   		}
-		      
+		   		} 
 		    $("#flag").empty().append(questions[num].question);
+		    console.log(questions.splice(questions.indexOf(questions[num]),1,questions[0]), questions.length);
 		});
+
 
 	// hides instructions div
 		$('#play-now').on('click', function(){
@@ -56,6 +64,7 @@ $(document).ready(function(){
 				console.log("Max number of attempts: " + maxAttempts);
 				$('#instructions').addClass('hidden');
 		});
+
 
 /* ------------------ functionality for game difficulty ----------------------- */
 
@@ -71,6 +80,7 @@ $(document).ready(function(){
 				}
 			console.log("Max number of attempts: " + maxAttempts);
 		});
+
 
 /* -------------------- functionality for game length ------------------------- */
 	//	set length of game
@@ -104,6 +114,7 @@ $(document).ready(function(){
 				$('#instructions').addClass('hidden');
 		});
 
+
 /* --------------- functionality for clicking li's images ---------------------- */
 	// verification of selection (adds orange border to image selected)
 		$('li').on('click', 'img', function(){
@@ -117,6 +128,7 @@ $(document).ready(function(){
 		$('li').on('click','img', function(){
 				$('#your-choice').html("<span>" +playerChoice+ "</span>");
 		});
+
 
 /* --------------- functionality for '#submit-answer' button ----------------- */
 		// verification of answer (red border = wrong && green border = correct)
@@ -135,19 +147,17 @@ $(document).ready(function(){
 					}
 			});
 
+
 /* --------------- functionality for '#next-question' button ----------------- */
 
 		// after clicking next-question
 		// update the questionNumber
 		// show results div
 
-		// CHECK LOGIC OF ELSE IF 'BLOCK'
-
-
 			$('#next-question').on('click', function(){
 				var flagName = $('#flag > img').attr('alt');
 				
-					if(questionNumber < gameLength){
+					if(questionNumber <= gameLength){
 							if(playerChoice === flagName){
 								// correct results array.push(state name && state map && flag image )
 								correctResults.push(flagName);
@@ -167,6 +177,9 @@ $(document).ready(function(){
 							}
 					} else {
 							$('#results').removeClass('hidden');
+							// disables 'submit-answer' and 'next-question' buttons
+							$('#submit-answer').prop("disabled",true);
+							$('#next-question').prop("disabled",true);
 					}
 			});
 
@@ -207,6 +220,50 @@ $(document).ready(function(){
 		// resets attempt number
 			$('#next-question').on('click', function(){
 					attempts = 0;
+			});
+
+
+/* --------------- functionality for '#next-question' button ----------------- */
+
+	// start a new game
+
+		// reset all values
+			$('#play-again').on('click', function(){
+					questions = questionsCopy;
+					correctResults = [];
+					incorrectResults = [];
+					gameLength = 10;
+					questionNumber = 1;
+					attempts = 0;
+					maxAttempts = 1;
+			});
+
+		// display instructions div
+			$('#play-again').on('click', function(){
+					$('#instructions').removeClass('hidden');
+			});
+
+		// re-enable '#submit-answer' and '#next-question' buttons
+			$('#play-again').on('click', function(){
+					$('#submit-answer').prop("disabled",false);
+					$('#next-question').prop("disabled",false);
+			});
+
+		// add class hidden to hide results div
+			$('#play-again').on('click', function(){
+					$('#results').addClass('hidden');
+			});
+
+		// restart question-number and question total
+			$('#play-again').on('click', function(){
+					$('#question-number').text(questionNumber);
+					$('#question-total').text(gameLength);
+			});
+
+		// empty unorderlists in correct-answers and incorrect-answers
+			$('#play-again').on('click', function(){
+				$('#correct-answers ul').empty();
+				$('#incorrect-answers ul').empty();
 			});
 
 }); // end of document ready function
