@@ -64,11 +64,6 @@
             	Index.html
 --------------------------------------*/
 
-
-/*++++++++++ Intro-Content ++++++++++++*/
-
-
-
 /*+++++++++++ Instructions +++++++++++++*/
 	
 	/* #intructions div style and position */
@@ -90,7 +85,8 @@
 	/* individual div positions */
 		#instructions #how-to-play,
 		#instructions #game-length,
-		#instructions #game-difficulty {
+		#instructions #game-difficulty,
+		#instructions #know-how-to-play {
 			/*background: orange;*/
 			margin: 0 auto;
 			padding-bottom: 0.5rem;
@@ -201,6 +197,59 @@
 
 
 /*++++++++++++++ Results ++++++++++++++++*/
+
+	/* #intructions div style and position */
+		#results {
+			background: rgba(0,0,0,0.8);
+			border: 2px solid black;
+			border-radius: 2rem;
+			color: lightgreen;
+			font-size: 2rem;
+			height: 75%;
+			left: 15%;
+			margin: 0 auto;
+			overflow: scroll;
+			position: absolute;
+			top: 12.5%;
+			width: 70%;
+		}
+
+	/* individual div positions */
+		#results #correct-answers,
+		#results #incorrect-answers {
+			/*background: orange;*/
+			margin: 0 auto;
+			padding-bottom: 0.5rem;
+			padding-top: 0.5rem;
+			text-align: center;
+			width: 70%;
+		}
+
+		#results #correct-answers ul,
+		#results #incorrect-answers ul {
+			padding-left: 0;
+		}
+
+		#results #correct-answers ul li,
+		#results #incorrect-answers ul li {
+			display: inline-block;
+		}
+
+		#results img {
+			height: 30%;
+	    width: 50%;
+		}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

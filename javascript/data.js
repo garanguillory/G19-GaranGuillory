@@ -1,3 +1,28 @@
+  var $option1 = $('#option1');
+  var $option2 = $('#option2');
+  var $option3 = $('#option3');
+  var $option4 = $('#option4');
+  var $option5 = $('#option5');
+  var $option6 = $('#option6');
+
+  var $playNow = $('#play-now');
+
+  var $easy = $('#easy');
+  var $medium = $('#medium');
+  var $hard = $('#hard');
+
+  var $sprint = $('#sprint');
+  var $halfMarathon = $('#half-marathon');
+  var $marathon = $('#marathon');
+
+  var playerChoice;
+  var gameLength = 10; // preset to 10 incase user does not choose
+  var questionNumber = 1;
+  var attempts = 0;
+  var flagName = $('#flag > img').attr('alt');
+  var maxAttempts = 1; // preset to 1 incase user does not choose
+
+
 var states = [
   { name: "Alabama",
     location: "<img class='center-block' src='images/state_location/AlabamaStateLocation.svg.png' alt='Alabama'>",
@@ -151,6 +176,7 @@ var states = [
     flag: "<img class='center-block' src='images/state_flag/WyomingStateFlag.svg.png' alt='Wyoming'>"}
 ];
 
+
 var questions = [
   {question: states[0].flag, option1: states[0].location, option2: states[9].location, option3: states[4].location, option4: states[12].location, option5: states[21].location, option6: states[22].location},
   {question: states[1].flag, option1: states[13].location, option2: states[1].location, option3: states[8].location, option4: states[3].location, option5: states[20].location, option6: states[41].location},
@@ -203,5 +229,21 @@ var questions = [
   {question: states[48].flag, option1: states[8].location, option2: states[5].location, option3: states[26].location, option4: states[44].location, option5: states[11].location, option6: states[48].location},
   {question: states[49].flag, option1: states[7].location, option2: states[6].location, option3: states[28].location, option4: states[43].location, option5: states[49].location, option6: states[28].location}
 ];
+
+
+var correctResults = [];
+
+
+var incorrectResults = [];
+
+
+
+
+
+
+
+
+
+
 
 // module.exports = States;
