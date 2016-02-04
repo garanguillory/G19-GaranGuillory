@@ -3,9 +3,7 @@
 	// if number is in array
 	// call random number generator again
 	function compare(array){
-
 		var number = random50();
-
 			if(array.indexOf(number) === -1){
 					console.log("All good.")
 					array.push(number);
@@ -48,13 +46,31 @@ $(document).ready(function(){
 
 
 	// randomize first question
+		// $('#play-now').on('click', function(){
+		//     var num = random50();
+		//    		for(var i=1; i<=6; i++){
+		//    			$("#option"+i).empty().append(questions[num]['option'+i]);
+		//    		} 
+		//     $("#flag").empty().append(questions[num].question);
+		//     console.log(questions.splice(questions.indexOf(questions[num]),1,questions[0]), questions.length);
+		// });
+
 		$('#play-now').on('click', function(){
-		    var num = random50();
-		   		for(var i=1; i<=6; i++){
-		   			$("#option"+i).empty().append(questions[num]['option'+i]);
-		   		} 
-		    $("#flag").empty().append(questions[num].question);
-		    console.log(questions.splice(questions.indexOf(questions[num]),1,questions[0]), questions.length);
+			var num = compare(randomNumberArray);
+      var randoArray = [];
+
+     		for(var i=1; i<=6; i++){
+ 					var rando = compare(randoArray)
+ 					$("#option"+i).empty().append(states[rando]['location']);
+     		}
+
+     		if(randoArray.indexOf(num) === -1){
+     			$("#option"+random6()).empty().append(questions[num]['answer']);
+     		} else {
+     			console.log("answer already available")
+     		}
+	      
+	    $("#flag").empty().append(questions[num].question);
 		});
 
 
@@ -100,13 +116,21 @@ $(document).ready(function(){
 
 	// randomize first question
 		$('#game-length ul').on('click', 'input', function(){
-			 var num = random50();
+				var num = compare(randomNumberArray);
+	      var randoArray = [];
 
-					for(var i=1; i<=6; i++){
-						$("#option"+i).empty().append(questions[num]['option'+i]);
-					}
-			   
-			 $("#flag").empty().append(questions[num].question);
+	     		for(var i=1; i<=6; i++){
+	 					var rando = compare(randoArray)
+	 					$("#option"+i).empty().append(states[rando]['location']);
+	     		}
+
+	     		if(randoArray.indexOf(num) === -1){
+	     			$("#option"+random6()).empty().append(questions[num]['answer']);
+	     		} else {
+	     			console.log("answer already available")
+	     		}
+		      
+		    $("#flag").empty().append(questions[num].question);
 		});
 
 	// hide instructions div
@@ -195,27 +219,33 @@ $(document).ready(function(){
 			});
 
 			// num does not exist because the questions array has been shortened
-			// need to insert a dummy question object in spliced object's place
+			// need to insert a dummy question object in spliced object's place √
 
-		// set up next question
-			$('#next-question').on('click', function(){
+	// set up next question
+		$('#next-question').on('click', function(){
 
-					var num = compare(randomNumberArray);
-		      console.log("num = "+num)
-		     		for(var i=1; i<=6; i++){
-		     			console.log("num = "+num);
-		     			$("#option"+i).empty().append(questions[num]['option'+i]);
-		     		}
-			      
-			    $("#flag").empty().append(questions[num].question);
-	      
-	      	$('#question-number').text(updateQuestion());
-	      	console.log("You are now on question " + $('#question-number').text());
+				var num = compare(randomNumberArray);
+	      var randoArray = [];
 
-	      	// console.log(questions.splice(questions.indexOf(num),1), questions.length);
-	      	console.log(questions.splice(questions.indexOf(questions[num]),1,questions[0]), questions.length);
+	     		for(var i=1; i<=6; i++){
+	 					var rando = compare(randoArray)
+	 					$("#option"+i).empty().append(states[rando]['location']);
+	     		}
+
+	     		if(randoArray.indexOf(num) === -1){
+	     			$("#option"+random6()).empty().append(questions[num]['answer']);
+	     		} else {
+	     			console.log("answer already available")
+	     		}
+		      
+		    $("#flag").empty().append(questions[num].question);
       
-			});
+      	$('#question-number').text(updateQuestion());
+      	console.log("You are now on question " + $('#question-number').text());
+
+      	console.log(questions.splice(questions.indexOf(questions[num]),1,questions[0]), questions.length);
+    
+		});
 
 		// resets attempt number
 			$('#next-question').on('click', function(){
@@ -224,7 +254,6 @@ $(document).ready(function(){
 
 
 /* --------------- functionality for '#next-question' button ----------------- */
-
 	// start a new game
 
 		// reset all values
@@ -265,6 +294,7 @@ $(document).ready(function(){
 				$('#correct-answers ul').empty();
 				$('#incorrect-answers ul').empty();
 			});
+
 
 }); // end of document ready function
 
